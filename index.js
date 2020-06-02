@@ -34,6 +34,10 @@ function processFirstItem(stringList, callback) {
  *
 */
 
+//1. Counter 1 will store the count inside of the function and return the value incremented inside of another function, in this case the value of count will be stored in memory, not allowing it to get garbage collected
+
+//2. Counter 2 , the count variable is declared globally, meaning that when it returns count++, it's always going to hold the same value.
+
 // counter1 code
 function counterMaker() {
   let count = 0;
@@ -44,13 +48,19 @@ function counterMaker() {
 
 const counter1 = counterMaker();
 
+// console.log(counter1());
+// console.log(counter1());
+
 // counter2 code
+
 let count = 0;
 
 function counter2() {
   return count++;
 }
 
+// console.log(count);
+// console.log(count);
 
 /* Task 2: inning() 
 
