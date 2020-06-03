@@ -139,7 +139,7 @@ function scoreboard(inning, inningNum) {
   let homeVal = 0; 
   let awayVal = 0;
 
-    for(let i = 0; i<=inningNum; i++){
+    for(let i = 0; i<inningNum; i++){
       homeVal = homeVal + inning();
       awayVal = awayVal + inning();
 
@@ -152,3 +152,13 @@ function scoreboard(inning, inningNum) {
 console.log(scoreboard(inning(), 9));
 
 
+
+function createBase(number){
+  return function(num){
+    return num + number;
+  }
+
+}
+
+// var addSix = createBase(6);
+// console.log(addSix(10));
